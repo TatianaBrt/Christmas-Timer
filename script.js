@@ -1,27 +1,58 @@
-/*
-This is your site JavaScript code - you can add interactivity and carry out processing
-- Initially the JS writes a message to the console, and moves a button you can add from the README
-*/
+function  christmasCountdown(){
+    const christmasDate=new Date ("December 25,2022 00:00");
+    const now= new Date ();
+    const diff= christmasDate-now;
+    const msInSecond=1000;
+    const msInMinute=60*1000;
+    const msInHour=60*60*1000;
+    const msInDay=24*60*60*1000;
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
+    const displayDay=Math.floor(diff/msInDay);
+    document.querySelector(".days").textContent=displayDay;
 
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function() {
-    // The JS works in conjunction with the 'dipped' code in style.css
-    btn.classList.toggle("dipped");
-  };
+    const displayHour=Math.floor((diff%msInDay)/msInHour);
+    document.querySelector(".hours").textContent=displayHour;
+
+    const displayMinute=Math.floor((diff%msInHour)/msInMinute);
+    document.querySelector(".minutes").textContent=displayMinute;
+
+    const displaySecond=Math.floor((diff%msInMinute)/msInSecond);
+    document.querySelector(".seconds").textContent=displaySecond;
+
+    
+
+    if (diff<=0){
+        document.querySelector(".days").textContent=0;
+        document.querySelector(".hours").textContent=0;
+        document.querySelector(".minutes").textContent=0;
+        document.querySelector(".seconds").textContent=0;
+        
+        clearInterval(timerID);
+        merryChristmas();
+    }
+
 }
+let timerID=setInterval(christmasCountdown,1000);
 
-// This is a single line JS comment
-/*
-This is a comment that can span multiple lines 
-- use comments to make your own notes!
-*/
+function merryChristmas(){
+    const heading=document.querySelector("h1");
+    heading.textContent="MERRY CHRISTMAS!!!";
+    heading.classList.add("red");
+}
+const button=document.querySelector("#myButton");
+const audio=document.querySelector("#myAudio");
+
+button.addEventListener("click",function()
+{
+    if(audio.paused){
+        audio.play();
+        button.classList.toggle("pause");
+    }
+    else{
+        audio.pause();
+        button.classList.toggle("pause");
+    }
+})
+
+
+
