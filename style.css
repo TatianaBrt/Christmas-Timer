@@ -95,6 +95,7 @@ button{
         background-repeat:no-repeat;
         background-size:cover;
         background-color: #0f0f0d;
+        background-size: auto;
         }
         .days,.hours,.minutes,.seconds{
         font-size: 20px;
@@ -111,6 +112,8 @@ button{
         .christmas{
         border: none;
         }
-  
+  #particles-js {
+    position: fixed;
+      }
         
 }
