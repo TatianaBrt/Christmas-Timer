@@ -14,6 +14,18 @@ This project implements timer and countdown :
 
 ## Preview
 
+![Christmas_time - Google Chrome 13 07 2023 12_46_39](https://github.com/TatianaBrt/Christmas-Timer/assets/115479875/f8c36324-655f-43a3-abb6-617220250e7a)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
