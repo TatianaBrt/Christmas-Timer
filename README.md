@@ -13,7 +13,7 @@ This project implements timer and countdown :
 * used function Date
 
 ## Preview
-![Christmas_time - Google Chrome 13 07 2023 12_24_47](https://github.com/TatianaBrt/Christmas-Timer/assets/115479875/cf6d3b7b-fdf2-48e6-b3af-4b580d47890d)
+
 
 
 
